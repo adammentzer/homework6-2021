@@ -58,7 +58,7 @@ body{
   .card > header {
     background: #288088;
     /* position: fixed; */
-    border-style: solid 2px #45ADAD;
+    border: solid 2px #45ADAD;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top-left-radius: 7px;
@@ -122,7 +122,7 @@ body{
       .card > header {
         background: #288088;
         /* position: fixed; */
-        border-style: solid 2px #45ADAD;
+        border: solid 2px #45ADAD;
         padding-top: 20px;
         padding-bottom: 20px;
         border-top-left-radius: 7px;
