@@ -1,0 +1,224 @@
+body{
+    font-family: Alegreya Sans SC, serif;
+    background: url('../images/concrete_seamless.png'), no-repeat, center;
+    background-color: #f1f1f1;
+    /* font-size: 16pt; test for this! Make all sizes em or rem */
+  }
+  .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  header{
+    display:flex;
+    background: #fff;
+    border-bottom: 3px solid #50C7C7;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+  }
+  a { 
+    color: blue;
+    }  
+
+  .nav_links{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    padding: 1px;
+  }
+
+  .pricing{
+    /* min-height: 475px; */
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    /* flex-basis: 450px; */
+    /* flex-grow: 0; */
+    
+  }
+
+  .card {
+    /* margin: 12px; */
+    /* flex-direction: column; */
+    /* background: #fff; */
+    /* border-radius: 7px; */
+    /* padding: 0 0 25px 0; */
+    flex-basis: 450px;
+    /* flex-grow: 0; */
+   
+
+  }
+  .card > header {
+    background: #288088;
+    /* position: fixed; */
+    border-style: solid 2px #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+        /* padding: 20px; */
+    /* padding: 0 0 25px 0; */
+  
+  }
+  .gallery{
+    /* min-height: 600px; */
+    display: flex;
+    flex-direction: row; 
+    flex-grow: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    /* align-items: space-around; */
+  }
+  .gallery > img{
+    border: 10px solid #50C7C7;
+    /* min-height: 600px; */
+ /* border-style: solid 10px #50C7C7; */
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  @keyframes homework{
+      from{
+          width: 50px;
+          opacity: 0;
+      }
+      to{
+          width: 425px;
+          opacity:1;
+      }
+  }
+
+  #logo{
+    animation-name: homework;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    
+}
+
+@media screen and (min-width: 850px){
+    header{
+        display:flex;
+        background: #fff;
+        border-bottom: 3px solid #50C7C7;
+        justify-content:space-between;
+        flex-direction: row;
+        align-content:flex-start;
+        position: sticky;
+        top: 0;
+        z-index:1;
+
+      }
+      .card > header {
+        background: #288088;
+        /* position: fixed; */
+        border-style: solid 2px #45ADAD;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        position: static;
+            /* padding: 20px; */
+        /* padding: 0 0 25px 0; */
+      
+      }
+
+
+      .nav_links{
+        display:flex;
+        /* justify-content:flex-end; */
+        flex-direction: row;
+        justify-content: space-around;
+        /* padding: 1px; */
+      }
+      .card {
+        /* margin: 12px; */
+        /* flex-direction: column; */
+        /* background: #fff; */
+        /* border-radius: 7px; */
+        /* padding: 0 0 25px 0; */
+        flex-basis: 250px;
+        /* flex-grow: 0; */
+       
+    
+      }
+}
+
+@media print{
+    body{
+        background: #f1f1f1;
+        /* font-size: 16pt; test for this! Make all sizes em or rem */
+      }
+      nav{
+        width: 100%;
+      }
+      .nav_links{
+        display:flex;
+        justify-content:space-evenly;
+        flex-direction: row;
+        align-items:space-around;
+        padding: 1px;
+      }
+
+      .nav_links li::before{
+        content: none;
+      }
+
+      li::before{
+        content: "👍";
+      }
+      .card {
+        /* margin: 12px; */
+        /* flex-direction: column; */
+        /* background: #fff; */
+        /* border-radius: 7px; */
+        /* padding: 0 0 25px 0; */
+        flex-basis: 250px;
+        border: solid 2px #45ADDD;
+        /* flex-grow: 0; */
+       
+    
+      }
+
+    
+      .gallery{
+          display: none;
+      }
+      .pricing{
+        /* min-height: 475px; */
+        display:flex;
+        justify-content:center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items:baseline;
+         flex-basis: 250px;
+        /* flex-grow: 0; */
+        align-items: flex-end;
+        
+      }
+
+      #gallery{
+          display: none;
+      }
+}
+
+@media (prefers-reduced-motion){
+    #logo{
+        animation:none;
+    }
+}
+
+
+ 
+
+
