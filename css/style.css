@@ -164,18 +164,30 @@ body{
       }
       .nav_links{
         display:flex;
-        justify-content:space-evenly;
+        justify-content:space-around;
         flex-direction: row;
         align-items:space-around;
         padding: 1px;
       }
 
+      
+
+      li:nth-child(1)::before{
+        content: "👍";
+      }
+
+      li:nth-child(2)::after{
+        content: "👍";
+      }
+      li:nth-child(3)::before{
+        content: "👍";
+      }
       .nav_links li::before{
         content: none;
       }
 
-      li::before{
-        content: "👍";
+      .nav_links li::after{
+        content: none;
       }
       .card {
         /* margin: 12px; */
